@@ -94,12 +94,12 @@
 #define SCALE_PID_TO_MAX 0
 #define TEMP_HYSTERESIS 0
 #define EXTRUDE_MAXLENGTH 160
-  
-#define NUM_TEMPS_USERTHERMISTOR0 25
+
+#define NUM_TEMPS_USERTHERMISTOR0 16
 // Custom Table for the Keenovo 500W AC Mat
 #define USER_THERMISTORTABLE0 { \
 	{0, 4000}, {660, 129*8}, {683, 123*8}, {898,116*8}, {995, 110*8}, \
-	{1063, 109*8}, {1259, 100*8}, {1635, 92*8}, {2340, 71*8}, \
+	{1063, 109*8}, {1259, 100*8}, {1635, 92*8}, \
 	{2288, 70*8}, {2683, 60*8}, {2660, 59*8}, {2924, 55*8}, {3408, 39*8}, \
 	{3608, 30*8}, {3808, 17*8}, {4095, -440} \
 }
