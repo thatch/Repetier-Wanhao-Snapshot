@@ -94,10 +94,16 @@
 #define SCALE_PID_TO_MAX 0
 #define TEMP_HYSTERESIS 0
 #define EXTRUDE_MAXLENGTH 160
+  
+#define NUM_TEMPS_USERTHERMISTOR0 25
+// Custom Table for the Keenovo 500W AC Mat
+#define USER_THERMISTORTABLE0 { \
+	{0, 4000}, {660, 129*8}, {683, 123*8}, {898,116*8}, {995, 110*8}, \
+	{1063, 109*8}, {1259, 100*8}, {1635, 92*8}, {2340, 71*8}, \
+	{2288, 70*8}, {2683, 60*8}, {2660, 59*8}, {2924, 55*8}, {3408, 39*8}, \
+	{3608, 30*8}, {3808, 17*8}, {4095, -440} \
+}
 
-// Taken from Marlin Thermistor #11
-#define NUM_TEMPS_USERTHERMISTOR0 0
-#define USER_THERMISTORTABLE0 {}
 #define NUM_TEMPS_USERTHERMISTOR1 0
 #define USER_THERMISTORTABLE1 {}
 #define NUM_TEMPS_USERTHERMISTOR2 0
@@ -117,9 +123,9 @@
 // ############# Heated bed configuration ########################
 
 #define HAVE_HEATED_BED 1
-#define HEATED_BED_MAX_TEMP 130
+#define HEATED_BED_MAX_TEMP 120
 #define SKIP_M190_IF_WITHIN 3
-#define HEATED_BED_SENSOR_TYPE 97
+#define HEATED_BED_SENSOR_TYPE 5 // change to 97 for the default bed
 #define HEATED_BED_SENSOR_PIN TEMP_1_PIN
 #define HEATED_BED_HEATER_PIN HEATER_1_PIN
 #define HEATED_BED_SET_INTERVAL 1000
@@ -191,7 +197,7 @@
 #define DISABLE_E 0
 #define INVERT_X_DIR 0
 #define INVERT_Y_DIR 0
-#define INVERT_Z_DIR 0
+#define INVERT_Z_DIR 1
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
